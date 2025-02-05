@@ -3,11 +3,17 @@ package zilch.pages;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.WebElement;
 
-public class SignupPage extends BasePage {
+public class ApplyPage extends BasePage {
 
-    @FindBy(id="welcome-screen-button-login-in")
+    @FindBy(name="email")
     public WebElement loginButton;
 
-    @FindBy(id="welcome-screen-button-get-started")
+    @FindBy(name="passwordSignup")
     public WebElement getStartedButton;
+
+
+    public void setEmail(String email) {
+        loginButton.
+    }
+
 }
