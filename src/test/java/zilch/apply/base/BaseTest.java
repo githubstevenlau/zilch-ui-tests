@@ -1,10 +1,11 @@
-package zilch.signup;
+package zilch.apply.base;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
+import zilch.pages.ApplyPage;
 import zilch.pages.BasePage;
 import zilch.pages.LoginPage;
 
@@ -16,8 +17,8 @@ public class BaseTest {
 
     protected WebDriver driver;
     protected BasePage basePage;
-    protected LoginPage loginPage;
-    private final String url = "https://customers.payzilch.com/signup";
+    protected ApplyPage applyPage;
+    private final String url = "https://customers.payzilch.com/apply";
 
     @BeforeClass
     public void setUp() {
@@ -27,7 +28,7 @@ public class BaseTest {
         driver.get(url);
         basePage = new BasePage();
         basePage.setDriver(driver);
-        loginPage = new LoginPage();
+        applyPage = new ApplyPage();
     }
 
     @AfterClass
@@ -42,5 +43,4 @@ public class BaseTest {
         basePage.setDriver(driver);
         setUtilityDriver();
     }
-
 }
