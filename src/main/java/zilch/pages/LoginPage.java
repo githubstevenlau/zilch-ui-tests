@@ -7,10 +7,7 @@ public class LoginPage extends BasePage {
     private final By emailField = By.id("email-field");
     private final By passwordField = By.id("password-field");
     private final By loginButton = By.id("log-in-button");
-
-    public LoginPage() {
-        super();
-    }
+    private final By invalidEmailValidationMessage = By.id("email-field-validation-msg");
 
     public void setEmail(String email) {
         set(emailField, email);
@@ -22,5 +19,9 @@ public class LoginPage extends BasePage {
 
     public void clickLoginButton() {
         click(loginButton);
+    }
+
+    public String getInvalidEmailValidationMessage() {
+        return find(invalidEmailValidationMessage).getText();
     }
 }
