@@ -1,16 +1,13 @@
-package zilch.login.tests;
+package zilch.apply.tests;
 
 import org.testng.annotations.Test;
+import zilch.apply.base.BaseTest;
 
-import zilch.login.base.BaseTest;
+public class ApplyTests extends BaseTest {
 
-public class LoginTests extends BaseTest {
+    @Test()
+    public void loginBlankEmailTest() {
 
-    @Test
-    public void loginErrorMessageTest() {
-        loginPage.setEmail("invalid@email.com");
-        loginPage.setPassword("password123!");
-
-        loginPage.clickLoginButton();
+        applyPage.clickEmail();
     }
 }
