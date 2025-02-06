@@ -11,6 +11,4 @@ public class JavaScriptUtility  extends Utility {
         String jsScript = "arguments[0].scrollIntoView();";
         ((JavascriptExecutor)driver).executeScript(jsScript, element);
     }
-
 }
-
